@@ -1,14 +1,16 @@
 import pandas as pd
 from yahoo_oauth import OAuth2
 import logging
+#oauth_logger = logging.getLogger('yahoo_oauth')
+#oauth_logger.disabled = True
 import json
 from json import dumps
 import datetime
 
 
 class Yahoo_Api():
-    def __init__(self,
-                 consumer_key,
+    def __init__(self, 
+                 consumer_key, 
 
                  consumer_secret#,
                 #access_token
@@ -28,7 +30,7 @@ class Authorize():
     def AuthorizeLeague(self):
         # UPDATE LEAGUE GAME ID
         yahoo_api._login()
-        url = 'https://fantasysports.yahooapis.com/fantasy/v2/league/380.l.XXXXXX/transactions'
+        url = 'https://fantasysports.yahooapis.com/fantasy/v2/league/380.l.6288/transactions'
         response = oauth.session.get(url, params={'format': 'json'})
         r = response.json()
         #with open('YahooGameInfo.json', 'w') as outfile:
