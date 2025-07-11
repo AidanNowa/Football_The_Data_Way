@@ -51,18 +51,19 @@ class UpdateData():
         load_file.close()
 
         #### get number of new transactions since last transaction download
-        old_trans = old_transactions['fantasy_content']['league'][1]['transactions']['count']
-        new_trans = new_transactions['fantasy_content']['league'][1]['transactions']['count']
-        newest_trans = new_trans-old_trans
+        #old_trans = old_transactions['fantasy_content']['league'][1]['transactions']['count']
+        #new_trans = new_transactions['fantasy_content']['league'][1]['transactions']['count']
+    
+        #newest_trans = new_trans-old_trans
 
-        transactions = new_transactions['fantasy_content']['league'][1]['transactions']
+        #transactions = new_transactions['fantasy_content']['league'][1]['transactions']
 
         #load team number and names references as a dictionary
         team_numbers = {}
         with open('./teams/team_numbers.txt', 'r') as f:
             #for line in f:
             team_numbers= eval(f.read())
-
+        '''
         if new_trans > 0: # only run if there are new transactions
             transaction = 0
 
@@ -158,7 +159,7 @@ class UpdateData():
 
                 transaction += transaction
             return;
-
+        '''
     def UpdateLeague(self):
         # LEAGUE OVERVIEW
         yahoo_api._login()
@@ -241,7 +242,7 @@ def main():
 ##### Get Yahoo Auth ####
 
     # Yahoo Keys
-    with open('./auth/oauth2yahoo.json') as json_yahoo_file:
+    with open('auth/oauth2yahoo.json') as json_yahoo_file:
         auths = json.load(json_yahoo_file)
     yahoo_consumer_key = auths['consumer_key']
     yahoo_consumer_secret = auths['consumer_secret']
