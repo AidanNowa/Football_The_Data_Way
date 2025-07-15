@@ -6,7 +6,7 @@ Please use this data to make some slick visualizations of just how awesome,
 balanced, or powerful your team and/or league is!
 
 Data pulled from the Yahoo API is in the form of JSON. You can utilize the files
-in this format if you feel comfortable working with it, or you can utilize the
+in this format if you feel comfortable working with it, or you can utilize the 
 Data Transformation script (`Data_Transformations.py`) or the Jupyter Notebook
 to convert some of the data into a more friendly CSV.
 
